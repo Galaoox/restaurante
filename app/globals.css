@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+     --background: #F5F5F5; /* Tema claro: fondo claro */
+     --btn-background: #E5E5E5; /* Tema claro: botón claro */
+     --btn-background-hover: #D5D5D5; /* Tema claro: botón claro al pasar el mouse */
+     --foreground: #333333; /* Tema claro: texto oscuro */
+  }
+ 
+  @media (prefers-color-scheme: dark) {
+     :root {
+       --background: #333333; /* Tema oscuro: fondo oscuro */
+       --btn-background: #444444; /* Tema oscuro: botón oscuro */
+       --btn-background-hover: #555555; /* Tema oscuro: botón oscuro al pasar el mouse */
+       --foreground: #F5F5F5; /* Tema oscuro: texto claro */
+     }
+  }
+ }
+ 
+ @layer base {
+  * {
+     @apply border-gray-200; /* Bordes claros */
+  }
+ }
+ 
+ .animate-in {
+  animation: animateIn 0.3s ease 0.15s both;
+ }
+ 
+ @keyframes animateIn {
+  from {
+     opacity: 0;
+     transform: translateY(10px);
+  }
+  to {
+     opacity: 1;
+     transform: translateY(0);
+  }
+ }
+ 
